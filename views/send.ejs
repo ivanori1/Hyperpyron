@@ -1,0 +1,19 @@
+<%- include ("partials/header") %>
+<h1>Send</h1>
+<a class="btn btn-primary btn-lg" href="/send/new">Dodaj novi zahtjev</a>
+<% sendRequests.forEach(function(sendRequest) { %>
+<table>
+  <tr>
+    <th>Adresa</th>
+    <th>Iznos</th>
+  </tr>
+  <tr>
+    <td>
+      <%= sendRequest.address %>
+    </td>
+    <td>
+      <%= sendRequest.amount %>
+    </td>
+  </tr>
+  <% }) %> <%- include("partials/footer") %>
+</table>
